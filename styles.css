@@ -1,0 +1,96 @@
+/* Chromelite Technologies Limited — company profile stylesheet */
+
+/* Main brand colours are defined once here and reused throughout the stylesheet.
+   The remaining variables are neutral shades for backgrounds, text and borders. */
+:root {
+    --primary-colour: #123d35;     /* deep green */
+    --secondary-colour: #d6a342;   /* warm gold */
+    --accent-colour: #397765;      /* lighter green */
+    --white: #ffffff;
+    --page-neutral: #f4f7f5;
+    --surface-neutral: #fbfcfb;
+    --text-neutral: #26352f;
+    --muted-neutral: #5c6b64;
+    --border-neutral: #dce5df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--page-neutral);
+    color: var(--text-neutral);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+}
+
+/* TOP NAVIGATION BAR */
+.site-header {
+    width: 100%;
+    background: var(--primary-colour);
+    border-bottom: 4px solid var(--secondary-colour);
+    color: var(--white);
+}
+
+.header-inner {
+    width: min(1180px, calc(100% - 40px));
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand:visited,
+.brand:hover,
+.brand:active {
+    color: var(--white);
+}
+
+.brand-mark {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--secondary-colour);
+    color: var(--primary-colour);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+.brand-name strong {
+    font-size: 1rem;
+}
+
+.brand-name small {
+    margin-top: 4px;
+    color: var(--white);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+.nav-list {
+    display: flex;
